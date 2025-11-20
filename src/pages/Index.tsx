@@ -34,6 +34,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { toast } from "sonner";
 import { DocumentControlMenu } from "@/components/controls/DocumentControlMenu";
 import { DesignControlMenu } from "@/components/controls/DesignControlMenu";
 import { CollaborationMenu } from "@/components/controls/CollaborationMenu";
@@ -1292,7 +1293,13 @@ const Index = () => {
                 <Button variant="outline-orange" className="w-full" onClick={() => navigate("/preview")}>
                   Preview
                 </Button>
-                <Button className="w-full bg-brand-orange hover:bg-brand-orange/90 hover:shadow-md text-white transition-all">
+                <Button 
+                  className="w-full bg-brand-orange hover:bg-brand-orange/90 hover:shadow-md text-white transition-all"
+                  onClick={() => toast.success("Proposal sent successfully!", {
+                    position: "bottom-center",
+                    duration: 3000
+                  })}
+                >
                   Send Proposal
                 </Button>
               </div>
@@ -1304,7 +1311,10 @@ const Index = () => {
       {/* Floating Action Buttons - Mobile Only */}
       <FloatingActionButtons
         onPreview={() => navigate("/preview")}
-        onSendProposal={() => console.log("Send proposal")}
+        onSendProposal={() => toast.success("Proposal sent successfully!", {
+          position: "bottom-center",
+          duration: 3000
+        })}
       />
     </div>
   );

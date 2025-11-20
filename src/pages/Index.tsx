@@ -1192,16 +1192,16 @@ const Index = () => {
                     >
                       <div className="text-xs text-gray-500">ROI Period</div>
                     </EditableTextMock>
-                    <EditableTextMock className="text-lg font-bold text-green-600" improvedText="7.2 Years">
-                      <div className="text-lg font-bold text-green-600">8.5 Years</div>
+                    <EditableTextMock className="text-lg font-bold text-brand-teal" improvedText="7.2 Years">
+                      <div className="text-lg font-bold text-brand-teal">8.5 Years</div>
                     </EditableTextMock>
                   </div>
                   <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
                     <EditableTextMock className="text-xs text-gray-500 block" improvedText="Total Lifetime Savings">
                       <div className="text-xs text-gray-500">25-Year Savings</div>
                     </EditableTextMock>
-                    <EditableTextMock className="text-lg font-bold text-green-600" improvedText="$71,250">
-                      <div className="text-lg font-bold text-green-600">$58,500</div>
+                    <EditableTextMock className="text-lg font-bold text-brand-teal" improvedText="$71,250">
+                      <div className="text-lg font-bold text-brand-teal">$58,500</div>
                     </EditableTextMock>
                   </div>
                   <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">

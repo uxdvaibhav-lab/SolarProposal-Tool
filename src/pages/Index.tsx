@@ -1330,12 +1330,12 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
-                <Button variant="outline-orange" className="w-32" onClick={() => navigate("/preview")}>
+              <div className="fixed bottom-0 right-0 lg:w-64 xl:w-80 p-6 space-y-3 bg-gray-50 border-t border-gray-200">
+                <Button variant="outline-orange" className="w-full" onClick={() => navigate("/preview")}>
                   Preview
                 </Button>
                 <Button 
-                  className="w-32 bg-brand-orange hover:bg-brand-orange/90 hover:shadow-md text-white transition-all"
+                  className="w-full bg-brand-orange hover:bg-brand-orange/90 hover:shadow-md text-white transition-all"
                   onClick={() => toast.success("Proposal sent successfully!", {
                     position: "bottom-center",
                     duration: 3000,

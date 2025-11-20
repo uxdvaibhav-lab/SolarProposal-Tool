@@ -1297,7 +1297,12 @@ const Index = () => {
                   className="w-full bg-brand-orange hover:bg-brand-orange/90 hover:shadow-md text-white transition-all"
                   onClick={() => toast.success("Proposal sent successfully!", {
                     position: "bottom-center",
-                    duration: 3000
+                    duration: 3000,
+                    style: {
+                      background: "#f97316",
+                      color: "white",
+                      border: "none"
+                    }
                   })}
                 >
                   Send Proposal
@@ -1313,7 +1318,12 @@ const Index = () => {
         onPreview={() => navigate("/preview")}
         onSendProposal={() => toast.success("Proposal sent successfully!", {
           position: "bottom-center",
-          duration: 3000
+          duration: 3000,
+          style: {
+            background: "#f97316",
+            color: "white",
+            border: "none"
+          }
         })}
       />
     </div>

@@ -27,7 +27,7 @@ const InteractiveBreakevenChart = () => {
   }).join(' ');
   
   return (
-    <div className="relative h-80 bg-gray-50 rounded-lg p-4">
+    <div className="relative h-80 bg-white rounded-lg p-4">
       <svg className="w-full h-full" viewBox="0 0 800 300">
         <defs>
           <pattern id="grid" width="32" height="30" patternUnits="userSpaceOnUse">
@@ -108,7 +108,7 @@ const PreviewProposal = () => {
   const [financingOption, setFinancingOption] = useState<'cash' | 'loan' | 'lease'>('loan');
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <style>{chartStyles}</style>
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

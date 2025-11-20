@@ -2,13 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { X, Download, Share2, Sun } from "lucide-react";
 import { useState } from "react";
-import thumbHero from "@/assets/thumb-hero.jpg";
-import thumbCompany from "@/assets/thumb-company.jpg";
-import thumbSystem from "@/assets/thumb-system.jpg";
-import thumbInvestment from "@/assets/thumb-investment.jpg";
-import thumbTimeline from "@/assets/thumb-timeline.jpg";
-import thumbBenefits from "@/assets/thumb-benefits.jpg";
-import thumbSteps from "@/assets/thumb-steps.jpg";
+
 
 const PreviewProposal = () => {
   const navigate = useNavigate();
@@ -146,16 +140,7 @@ const PreviewProposal = () => {
             </div>
           </div>
 
-          <div className="relative rounded-lg overflow-hidden mb-6">
-            <img 
-              src={thumbSystem}
-              alt="Solar System Design" 
-              className="w-full h-64 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-              <p className="text-white font-medium">3D rendering of your customized solar installation</p>
-            </div>
-          </div>
+
 
           <div className="space-y-3">
             <div className="flex justify-between py-3 border-b border-gray-200">
@@ -320,16 +305,7 @@ const PreviewProposal = () => {
         <section className="bg-white rounded-lg border border-gray-200 p-6 mb-6 animate-in fade-in duration-700 delay-800">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Your 25-Year Financial Picture</h2>
           
-          <div className="relative rounded-lg overflow-hidden mb-6">
-            <img 
-              src={thumbBenefits}
-              alt="Financial Benefits" 
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-              <p className="text-white font-medium">Visualizing your long-term energy savings</p>
-            </div>
-          </div>
+
 
           <div className="space-y-6">
             <div className="border-2 border-dashed border-orange-300 rounded-lg p-6 text-center bg-orange-50">
@@ -418,16 +394,7 @@ const PreviewProposal = () => {
         <section className="bg-white rounded-lg border border-gray-200 p-6 mb-6 animate-in fade-in duration-700 delay-1000">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Environmental Impact</h2>
           
-          <div className="relative rounded-lg overflow-hidden mb-6">
-            <img 
-              src={thumbBenefits}
-              alt="Environmental Impact" 
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-              <p className="text-white font-medium">Making a difference for future generations</p>
-            </div>
-          </div>
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="border-2 border-dashed border-teal-300 rounded-lg p-6 text-center bg-teal-50">
@@ -462,16 +429,7 @@ const PreviewProposal = () => {
         <section className="bg-white rounded-lg border border-gray-200 p-6 mb-6 animate-in fade-in duration-700 delay-1100">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Your Project Timeline</h2>
           
-          <div className="relative rounded-lg overflow-hidden mb-6">
-            <img 
-              src={thumbTimeline}
-              alt="Installation Timeline" 
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-              <p className="text-white font-medium">From contract to clean energy in 5 weeks</p>
-            </div>
-          </div>
+
 
           <div className="space-y-6">
             {/* Phase 1 */}
@@ -512,16 +470,7 @@ const PreviewProposal = () => {
         <section className="bg-white rounded-lg border border-gray-200 p-6 mb-6 animate-in fade-in duration-700 delay-1200">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
           
-          <div className="relative rounded-lg overflow-hidden mb-6">
-            <img 
-              src={thumbSteps}
-              alt="Next Steps" 
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-              <p className="text-white font-medium">Your journey to energy independence starts here</p>
-            </div>
-          </div>
+
 
           <div className="space-y-4 mb-6">
             <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-6 text-lg">
@@ -548,16 +497,7 @@ const PreviewProposal = () => {
 
         {/* Section 13: Company Information Footer */}
         <section className="bg-gray-50 rounded-lg border border-gray-200 p-6 mb-6 animate-in fade-in duration-700 delay-1300">
-          <div className="relative rounded-lg overflow-hidden mb-6">
-            <img 
-              src={thumbCompany}
-              alt="Our Company" 
-              className="w-full h-48 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-              <p className="text-white font-medium">Trusted solar experts since 2008</p>
-            </div>
-          </div>
+
 
           <div className="text-center mb-4">
             <h3 className="text-xl font-bold text-gray-900 mb-2">SolarPros Energy Solutions</h3>

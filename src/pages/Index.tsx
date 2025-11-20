@@ -822,11 +822,61 @@ const Index = () => {
                     </EditableTextMock>
                   </div>
 
-                  <div className="border-2 border-dashed border-orange-300 rounded-lg p-6 text-center bg-orange-50 mb-6">
-                    <p className="text-sm text-gray-700 font-medium mb-2">25-Year Savings Timeline</p>
-                    <p className="text-xs text-gray-600">
-                      Year-by-year breakdown with cumulative savings and break-even point at Year 6
-                    </p>
+                  <div className="border border-gray-200 rounded-lg p-6 mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">25-Year Solar Financial Outlook</h3>
+                    <p className="text-sm text-gray-600 mb-4">Shows break-even point, pure savings years, and home value impact after installing solar</p>
+                    
+                    <div className="relative h-80 bg-gray-50 rounded-lg p-4">
+                      <svg className="w-full h-full" viewBox="0 0 800 300">
+                        {/* Grid lines */}
+                        <defs>
+                          <pattern id="grid" width="32" height="30" patternUnits="userSpaceOnUse">
+                            <path d="M 32 0 L 0 0 0 30" fill="none" stroke="#e5e7eb" strokeWidth="1"/>
+                          </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                        
+                        {/* Axes */}
+                        <line x1="60" y1="250" x2="740" y2="250" stroke="#374151" strokeWidth="2"/>
+                        <line x1="60" y1="250" x2="60" y2="30" stroke="#374151" strokeWidth="2"/>
+                        
+                        {/* Y-axis labels */}
+                        <text x="45" y="255" textAnchor="end" className="text-xs fill-gray-600">$0</text>
+                        <text x="45" y="200" textAnchor="end" className="text-xs fill-gray-600">$20k</text>
+                        <text x="45" y="145" textAnchor="end" className="text-xs fill-gray-600">$40k</text>
+                        <text x="45" y="90" textAnchor="end" className="text-xs fill-gray-600">$60k</text>
+                        <text x="45" y="35" textAnchor="end" className="text-xs fill-gray-600">$80k</text>
+                        
+                        {/* X-axis labels */}
+                        <text x="60" y="270" textAnchor="middle" className="text-xs fill-gray-600">1</text>
+                        <text x="200" y="270" textAnchor="middle" className="text-xs fill-gray-600">6</text>
+                        <text x="400" y="270" textAnchor="middle" className="text-xs fill-gray-600">15</text>
+                        <text x="740" y="270" textAnchor="middle" className="text-xs fill-gray-600">25</text>
+                        
+                        {/* Breakeven line */}
+                        <line x1="200" y1="30" x2="200" y2="250" stroke="#f97316" strokeWidth="2" strokeDasharray="5,5"/>
+                        
+                        {/* Main savings curve */}
+                        <path d="M 60,250 Q 150,240 200,250 Q 300,200 400,150 Q 550,100 740,70" 
+                              fill="none" stroke="#f97316" strokeWidth="3"/>
+                        
+                        {/* Pure savings highlight */}
+                        <rect x="200" y="30" width="540" height="220" fill="#f97316" fillOpacity="0.1"/>
+                        
+                        {/* Key points */}
+                        <circle cx="200" cy="250" r="5" fill="#f97316"/>
+                        <circle cx="740" cy="70" r="5" fill="#f97316"/>
+                        
+                        {/* Home value bar */}
+                        <rect x="720" y="180" width="15" height="70" fill="#10b981"/>
+                        
+                        {/* Annotations */}
+                        <text x="200" y="20" textAnchor="middle" className="text-sm font-semibold fill-orange-600">Breakeven</text>
+                        <text x="470" y="20" textAnchor="middle" className="text-sm font-semibold fill-orange-600">Pure Savings Years 7-25</text>
+                        <text x="740" y="60" textAnchor="middle" className="text-sm font-semibold fill-orange-600">$68,420</text>
+                        <text x="727" y="175" textAnchor="middle" className="text-xs fill-green-600">+$21k Home Value</text>
+                      </svg>
+                    </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

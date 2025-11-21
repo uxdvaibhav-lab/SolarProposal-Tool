@@ -4,9 +4,9 @@ import path from "path";
 
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   // GitHub Pages base path
-  base: process.env.NODE_ENV === 'production' ? '/neon-voice-studio/' : '/',
+  base: '/SolarProposal-Tool/',
   server: {
     host: "::",
     port: 8080,
@@ -17,4 +17,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+});

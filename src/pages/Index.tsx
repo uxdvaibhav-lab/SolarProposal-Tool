@@ -1128,7 +1128,7 @@ const Index = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="border border-orange-200 rounded-lg p-4">
-                    <div className="font-semibold text-orange-900 mb-2">⏰ Federal ITC Expires</div>
+                    <div className="font-semibold text-orange-900 mb-2">Federal ITC Expires</div>
                     <EditableTextMock multiline>
                       <p className="text-sm text-orange-700">
                         30% tax credit available through 2032, then drops to 26%. For your system, that's{" "}
@@ -1137,7 +1137,7 @@ const Index = () => {
                     </EditableTextMock>
                   </div>
                   <div className="border border-orange-200 rounded-lg p-4">
-                    <div className="font-semibold text-orange-900 mb-2">📅 Limited Installation Slots</div>
+                    <div className="font-semibold text-orange-900 mb-2">Limited Installation Slots</div>
                     <EditableTextMock multiline>
                       <p className="text-sm text-orange-700">
                         Current installer availability fills by [Month]. Lock in summer installation to maximize

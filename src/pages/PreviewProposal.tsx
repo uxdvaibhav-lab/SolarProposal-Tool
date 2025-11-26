@@ -1,8 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { X, Download, Share2, Sun } from "lucide-react";
+import { X, Download, Share2, Sun, Battery, DollarSign, TrendingUp } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import thumbHero from "@/assets/thumb-hero.jpg";
+import thumbSystem from "@/assets/thumb-system.jpg";
+import thumbBenefits from "@/assets/thumb-benefits.jpg";
+import thumbCompany from "@/assets/thumb-company.jpg";
+import thumbTimeline from "@/assets/thumb-timeline.jpg";
+import avatarJane from "@/assets/avatar-jane.jpg";
+import avatarMike from "@/assets/avatar-mike.jpg";
 
 // Interactive Breakeven Chart Component
 const InteractiveBreakevenChart = () => {
@@ -155,9 +162,15 @@ const PreviewProposal = () => {
       {/* Main Content */}
       <main className="container mx-auto px-4 md:px-6 py-8 max-w-5xl">
         {/* Section 1: Personalized Cover Letter */}
-        <section className="bg-white text-gray-900 rounded-lg border border-gray-200 p-6 sm:p-8 mb-6 animate-in fade-in duration-700 delay-100">
-          <div className="mb-6">
-            <h2 className="text-3xl font-bold mb-4">A Solar Solution, Designed for You</h2>
+        <section className="bg-white text-gray-900 rounded-lg border border-gray-200 p-6 sm:p-8 mb-6 animate-in fade-in duration-700 delay-100 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+            <img src={thumbHero} alt="Solar home" className="w-full h-full object-cover rounded-lg" />
+          </div>
+          <div className="mb-6 relative z-10">
+            <div className="flex items-center gap-3 mb-4">
+              <Sun className="w-8 h-8 text-orange-600" />
+              <h2 className="text-3xl font-bold">A Solar Solution, Designed for You</h2>
+            </div>
             <p className="text-lg text-gray-900/90 leading-relaxed">
               Hi Alisa, based on our conversation about your energy independence and rising electricity bills,
               here's a solar solution tailored specifically for your home at 125 Maple Drive, Sunnyvale, CA.
@@ -178,15 +191,24 @@ const PreviewProposal = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="border border-orange-200 rounded-lg p-4">
-                <div className="font-semibold text-orange-900 mb-1">Energy Independence</div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Battery className="w-5 h-5 text-orange-600" />
+                  <div className="font-semibold text-orange-900">Energy Independence</div>
+                </div>
                 <p className="text-sm text-orange-700">Protect against future rate hikes</p>
               </div>
               <div className="border border-orange-200 rounded-lg p-4">
-                <div className="font-semibold text-orange-900 mb-1">30% Tax Credit</div>
+                <div className="flex items-center gap-2 mb-2">
+                  <DollarSign className="w-5 h-5 text-orange-600" />
+                  <div className="font-semibold text-orange-900">30% Tax Credit</div>
+                </div>
                 <p className="text-sm text-orange-700">Federal ITC expires soon</p>
               </div>
               <div className="border border-orange-200 rounded-lg p-4">
-                <div className="font-semibold text-orange-900 mb-1">Carbon Offset</div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Sun className="w-5 h-5 text-orange-600" />
+                  <div className="font-semibold text-orange-900">Carbon Offset</div>
+                </div>
                 <p className="text-sm text-orange-700">Reduce environmental impact</p>
               </div>
             </div>

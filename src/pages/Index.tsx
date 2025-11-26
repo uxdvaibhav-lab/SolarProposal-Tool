@@ -488,7 +488,7 @@ const Index = () => {
     },
   ];
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
+    <div className="min-h-screen bg-white p-6">
       {/* Mobile Header - Only visible on mobile/tablet */}
       <MobileHeader
         navigationDrawer={
@@ -661,9 +661,15 @@ const Index = () => {
           <main className="flex-1 overflow-y-auto scrollbar-hide animate-in slide-in-from-bottom duration-700">
             <div className="p-4 sm:p-6 md:p-8 pb-8 space-y-6 sm:space-y-8">
               {/* Section 1: Personalized Cover Letter */}
-              <section className="bg-white text-gray-900 rounded-lg border border-gray-200 p-6 sm:p-8 mb-6 animate-in fade-in duration-700 delay-100">
-                <div className="mb-6">
-                  <h2 className="text-3xl font-bold mb-4">A Solar Solution, Designed for You</h2>
+              <section className="bg-white text-gray-900 rounded-lg border border-gray-200 p-6 sm:p-8 mb-6 animate-in fade-in duration-700 delay-100 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+                  <img src={thumbHero} alt="Solar home" className="w-full h-full object-cover rounded-lg" />
+                </div>
+                <div className="mb-6 relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Sun className="w-8 h-8 text-orange-600" />
+                    <h2 className="text-3xl font-bold">A Solar Solution, Designed for You</h2>
+                  </div>
                   <EditableTextMock multiline className="text-lg text-gray-900/90 leading-relaxed">
                     <p className="text-lg text-gray-900/90 leading-relaxed">
                       Hi Alisa, based on our conversation about your energy independence and rising electricity bills,
@@ -688,15 +694,24 @@ const Index = () => {
                   </EditableTextMock>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="border border-orange-200 rounded-lg p-4">
-                      <div className="font-semibold text-orange-900 mb-1">Energy Independence</div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <Battery className="w-5 h-5 text-orange-600" />
+                        <div className="font-semibold text-orange-900">Energy Independence</div>
+                      </div>
                       <p className="text-sm text-orange-700">Protect against future rate hikes</p>
                     </div>
                     <div className="border border-orange-200 rounded-lg p-4">
-                      <div className="font-semibold text-orange-900 mb-1">30% Tax Credit</div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <DollarSign className="w-5 h-5 text-orange-600" />
+                        <div className="font-semibold text-orange-900">30% Tax Credit</div>
+                      </div>
                       <p className="text-sm text-orange-700">Federal ITC expires soon</p>
                     </div>
                     <div className="border border-orange-200 rounded-lg p-4">
-                      <div className="font-semibold text-orange-900 mb-1">Carbon Offset</div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <Sun className="w-5 h-5 text-orange-600" />
+                        <div className="font-semibold text-orange-900">Carbon Offset</div>
+                      </div>
                       <p className="text-sm text-orange-700">Reduce environmental impact</p>
                     </div>
                   </div>
@@ -705,7 +720,10 @@ const Index = () => {
 
               {/* Section 3: Current Situation Analysis */}
               <section className="bg-white rounded-lg border border-gray-200 p-6 mb-6 animate-in fade-in duration-700 delay-300">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Current Situation Analysis</h2>
+                <div className="flex items-center gap-3 mb-4">
+                  <TrendingUp className="w-6 h-6 text-orange-600" />
+                  <h2 className="text-2xl font-bold text-gray-900">Current Situation Analysis</h2>
+                </div>
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="border border-gray-200 rounded-lg p-4">
@@ -740,6 +758,31 @@ const Index = () => {
               {/* Section 4: How Solar Works for You */}
               <section className="bg-white rounded-lg border border-gray-200 p-6 mb-6 animate-in fade-in duration-700 delay-400">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">How Solar Works for You</h2>
+                <div className="mb-6">
+                  <div className="flex items-center justify-center gap-4 p-6 bg-orange-50 rounded-lg mb-4">
+                    <div className="text-center">
+                      <Sun className="w-12 h-12 text-orange-600 mx-auto mb-2" />
+                      <p className="text-sm font-medium">Solar Panels</p>
+                    </div>
+                    <div className="text-orange-600">→</div>
+                    <div className="text-center">
+                      <Battery className="w-12 h-12 text-orange-600 mx-auto mb-2" />
+                      <p className="text-sm font-medium">Inverter</p>
+                    </div>
+                    <div className="text-orange-600">→</div>
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white font-bold">H</span>
+                      </div>
+                      <p className="text-sm font-medium">Your Home</p>
+                    </div>
+                    <div className="text-orange-600">→</div>
+                    <div className="text-center">
+                      <TrendingUp className="w-12 h-12 text-orange-600 mx-auto mb-2" />
+                      <p className="text-sm font-medium">Grid Credits</p>
+                    </div>
+                  </div>
+                </div>
                 <EditableTextMock multiline>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     Solar panels capture sunlight → inverter converts to electricity → powers your home → excess flows
@@ -785,7 +828,8 @@ const Index = () => {
                     rated for 25 years with industry-leading inverter efficiency.
                   </p>
                 </EditableTextMock>
-                <div className="border-2 border-dashed border-orange-300 rounded-lg p-8 text-center bg-orange-50">
+                <div className="border-2 border-dashed border-orange-300 rounded-lg p-8 text-center bg-orange-50 relative">
+                  <img src={thumbSystem} alt="Solar system layout" className="w-full max-w-md mx-auto rounded-lg mb-4 opacity-80" />
                   <p className="text-sm text-gray-700 font-medium mb-2">Interactive 3D System Layout</p>
                   <p className="text-xs text-gray-600">32 panels optimally positioned on your east-facing roof slope</p>
                 </div>
@@ -793,7 +837,13 @@ const Index = () => {
 
               {/* Section 6: Battery + Energy Independence */}
               <section className="bg-white rounded-lg border border-gray-200 p-6 mb-6 animate-in fade-in duration-700 delay-600">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Battery + Energy Independence</h2>
+                <div className="flex items-center gap-3 mb-4">
+                  <Battery className="w-6 h-6 text-orange-600" />
+                  <h2 className="text-2xl font-bold text-gray-900">Battery + Energy Independence</h2>
+                </div>
+                <div className="mb-4">
+                  <img src={thumbBenefits} alt="Battery backup system" className="w-full max-w-sm mx-auto rounded-lg mb-4" />
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div className="border border-gray-200 rounded-lg p-4">
                     <div className="text-sm text-gray-600 mb-1">Backup Capacity</div>
@@ -1013,6 +1063,9 @@ const Index = () => {
               {/* Section 10: Why Choose Our Company */}
               <section className="bg-white rounded-lg border border-gray-200 p-6 mb-6 animate-in fade-in duration-700 delay-1000">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Company</h2>
+                <div className="mb-6">
+                  <img src={thumbCompany} alt="Our professional team" className="w-full max-w-lg mx-auto rounded-lg" />
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                   <div className="text-center">
@@ -1044,7 +1097,10 @@ const Index = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="border border-gray-200 rounded-lg p-4">
-                    <div className="font-semibold text-gray-900 mb-2">Customer Testimonial</div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <img src={avatarJane} alt="Sarah M." className="w-12 h-12 rounded-full" />
+                      <div className="font-semibold text-gray-900">Customer Testimonial</div>
+                    </div>
                     <EditableTextMock multiline>
                       <p className="text-sm text-gray-700 italic">
                         "System exceeded projections by 3%. Installation was seamless, and the team answered every
@@ -1054,7 +1110,10 @@ const Index = () => {
                     <p className="text-xs text-gray-600 mt-2">— Sarah M., Sunnyvale</p>
                   </div>
                   <div className="border border-gray-200 rounded-lg p-4">
-                    <div className="font-semibold text-gray-900 mb-2">Customer Testimonial</div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <img src={avatarMike} alt="Michael D." className="w-12 h-12 rounded-full" />
+                      <div className="font-semibold text-gray-900">Customer Testimonial</div>
+                    </div>
                     <EditableTextMock multiline>
                       <p className="text-sm text-gray-700 italic">
                         "Worried about roof warranty at first, but they explained everything. Three years later, zero
@@ -1069,6 +1128,9 @@ const Index = () => {
               {/* Section 11: Installation Timeline & Process */}
               <section className="bg-white rounded-lg border border-gray-200 p-6 mb-6 animate-in fade-in duration-700 delay-1100">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Installation Timeline & Process</h2>
+                <div className="mb-6">
+                  <img src={thumbTimeline} alt="Installation process" className="w-full max-w-lg mx-auto rounded-lg" />
+                </div>
 
                 <div className="space-y-4 mb-6">
                   <div className="flex gap-4">
@@ -1227,28 +1289,37 @@ const Index = () => {
                 <h3 className="text-sm font-semibold text-gray-900 mb-3">Quick Stats</h3>
                 <div className="space-y-3">
                   <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
-                    <EditableTextMock
-                      className="text-xs text-gray-500 block"
-                      improvedText="Return on Investment Timeline"
-                    >
-                      <div className="text-xs text-gray-500">ROI Period</div>
-                    </EditableTextMock>
+                    <div className="flex items-center gap-2 mb-1">
+                      <TrendingUp className="w-4 h-4 text-orange-600" />
+                      <EditableTextMock
+                        className="text-xs text-gray-500"
+                        improvedText="Return on Investment Timeline"
+                      >
+                        <div className="text-xs text-gray-500">ROI Period</div>
+                      </EditableTextMock>
+                    </div>
                     <EditableTextMock className="text-lg font-bold text-brand-teal" improvedText="7.2 Years">
                       <div className="text-lg font-bold text-brand-teal">8.5 Years</div>
                     </EditableTextMock>
                   </div>
                   <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
-                    <EditableTextMock className="text-xs text-gray-500 block" improvedText="Total Lifetime Savings">
-                      <div className="text-xs text-gray-500">25-Year Savings</div>
-                    </EditableTextMock>
+                    <div className="flex items-center gap-2 mb-1">
+                      <DollarSign className="w-4 h-4 text-orange-600" />
+                      <EditableTextMock className="text-xs text-gray-500" improvedText="Total Lifetime Savings">
+                        <div className="text-xs text-gray-500">25-Year Savings</div>
+                      </EditableTextMock>
+                    </div>
                     <EditableTextMock className="text-lg font-bold text-brand-teal" improvedText="$71,250">
                       <div className="text-lg font-bold text-brand-teal">$58,500</div>
                     </EditableTextMock>
                   </div>
                   <div className="p-3 rounded-lg bg-gray-50 border border-gray-200">
-                    <EditableTextMock className="text-xs text-gray-500 block" improvedText="Carbon Emissions Offset">
-                      <div className="text-xs text-gray-500">CO₂ Offset</div>
-                    </EditableTextMock>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Sun className="w-4 h-4 text-orange-600" />
+                      <EditableTextMock className="text-xs text-gray-500" improvedText="Carbon Emissions Offset">
+                        <div className="text-xs text-gray-500">CO₂ Offset</div>
+                      </EditableTextMock>
+                    </div>
                     <EditableTextMock className="text-lg font-bold text-brand-teal" improvedText="250 Tons">
                       <div className="text-lg font-bold text-brand-teal">200 Tons</div>
                     </EditableTextMock>

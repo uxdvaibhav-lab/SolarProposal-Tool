@@ -1285,6 +1285,27 @@ const Index = () => {
           {/* Right Panel - Hidden on mobile/tablet, visible on desktop */}
           <aside className="hidden lg:block lg:w-64 xl:w-80 bg-gray-50 border-l border-gray-200 p-6 overflow-y-auto scrollbar-hide animate-in slide-in-from-right duration-700">
             <div className="space-y-6">
+              {/* Preview and Send Buttons - Moved to top */}
+              <div className="space-y-3">
+                <Button variant="outline-orange" className="w-full" onClick={() => navigate("/preview")}>
+                  Preview
+                </Button>
+                <Button 
+                  className="w-full bg-brand-orange hover:bg-brand-orange/90 hover:shadow-md text-white transition-all"
+                  onClick={() => toast.success("Proposal sent successfully!", {
+                    position: "bottom-center",
+                    duration: 3000,
+                    style: {
+                      background: "#f97316",
+                      color: "white",
+                      border: "none"
+                    }
+                  })}
+                >
+                  Send Proposal
+                </Button>
+              </div>
+
               <div>
                 <h3 className="text-sm font-semibold text-gray-900 mb-3">Quick Stats</h3>
                 <div className="space-y-3">
@@ -1401,25 +1422,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="sticky bottom-0 pt-4 pb-4 space-y-3 border-t border-border mt-6 bg-gray-50">
-                <Button variant="outline-orange" className="w-full" onClick={() => navigate("/preview")}>
-                  Preview
-                </Button>
-                <Button 
-                  className="w-full bg-brand-orange hover:bg-brand-orange/90 hover:shadow-md text-white transition-all"
-                  onClick={() => toast.success("Proposal sent successfully!", {
-                    position: "bottom-center",
-                    duration: 3000,
-                    style: {
-                      background: "#f97316",
-                      color: "white",
-                      border: "none"
-                    }
-                  })}
-                >
-                  Send Proposal
-                </Button>
-              </div>
+
             </div>
           </aside>
         </div>

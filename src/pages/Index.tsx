@@ -659,7 +659,7 @@ const Index = () => {
 
           {/* Main Content Area - Full width on mobile */}
           <main className="flex-1 overflow-y-auto scrollbar-hide animate-in slide-in-from-bottom duration-700">
-            <div className="p-4 sm:p-6 md:p-8 pb-8 space-y-6 sm:space-y-8">
+            <div className="p-4 sm:p-6 md:p-8 pb-0 space-y-6 sm:space-y-8">
               {/* Section 1: Personalized Cover Letter */}
               <section className="bg-white text-gray-900 rounded-lg border border-gray-200 p-6 sm:p-8 mb-6 animate-in fade-in duration-700 delay-100 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 opacity-10">

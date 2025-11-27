@@ -640,24 +640,7 @@ const Index = () => {
               <span className="hidden sm:inline text-xs sm:text-sm">Send</span>
             </Button>
 
-            <Separator orientation="vertical" className="h-6 mx-1" />
 
-            {/* Profile Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="rounded-full p-0 h-8 w-8">
-                  <Avatar className="h-8 w-8 border-2 border-border hover:border-muted-foreground transition-colors">
-                    <AvatarImage src={mockCurrentUser.avatar} alt="User" />
-                    <AvatarFallback className="bg-primary text-primary-foreground text-xs font-medium">
-                      {mockCurrentUser.initials}
-                    </AvatarFallback>
-                  </Avatar>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56">
-                <ProfileMenu user={mockCurrentUser} onSignOut={() => console.log("Sign out")} />
-              </DropdownMenuContent>
-            </DropdownMenu>
           </div>
         </div>
 
@@ -678,7 +661,24 @@ const Index = () => {
               ))}
             </nav>
 
-            <div className="mt-auto pb-6">
+            <div className="mt-auto pb-6 space-y-2">
+              {/* Profile Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className="rounded-full p-0 h-10 w-10">
+                    <Avatar className="h-10 w-10 border-2 border-border hover:border-muted-foreground transition-colors">
+                      <AvatarImage src={mockCurrentUser.avatar} alt="User" />
+                      <AvatarFallback className="bg-primary text-primary-foreground text-xs font-medium">
+                        {mockCurrentUser.initials}
+                      </AvatarFallback>
+                    </Avatar>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56">
+                  <ProfileMenu user={mockCurrentUser} onSignOut={() => console.log("Sign out")} />
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
               <button
                 className="p-3 rounded-lg text-gray-500 hover:bg-accent hover:text-accent-foreground transition-all duration-200"
                 aria-label="Settings"

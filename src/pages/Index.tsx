@@ -664,7 +664,7 @@ const Index = () => {
         {/* App Content */}
         <div className="flex h-screen relative">
           {/* Left Sidebar - Hidden on mobile, visible on tablet+ */}
-          <aside className="hidden md:flex w-12 md:w-16 bg-gray-50 border-r border-gray-200 flex-col items-center animate-in slide-in-from-left duration-500 fixed left-0 top-[80px] h-[calc(100vh-80px)] z-10">
+          <aside className="hidden md:flex w-12 md:w-16 bg-gray-50 border-r border-gray-200 flex-col items-center animate-in slide-in-from-left duration-500 lg:fixed lg:left-0 lg:top-[80px] lg:h-[calc(100vh-80px)] lg:z-10">
             <nav className="flex flex-col items-center gap-2 pt-6">
               {navItems.map((item, index) => (
                 <button
@@ -690,7 +690,7 @@ const Index = () => {
           </aside>
 
           {/* Main Content Area - Full width on mobile */}
-          <main className="flex-1 overflow-y-auto scrollbar-hide animate-in slide-in-from-bottom duration-700 md:ml-12 lg:ml-16">
+          <main className="flex-1 overflow-y-auto scrollbar-hide animate-in slide-in-from-bottom duration-700 lg:ml-12 xl:ml-16">
             <div className="p-4 sm:p-6 md:p-8 pb-0 space-y-6 sm:space-y-8">
               {/* Section 1: Personalized Cover Letter */}
               <section className="bg-white text-gray-900 rounded-lg border border-gray-200 p-6 sm:p-8 mb-6 animate-in fade-in duration-700 delay-100 relative overflow-hidden">

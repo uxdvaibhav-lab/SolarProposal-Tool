@@ -199,25 +199,19 @@ const PreviewProposal = () => {
               already saving—average payback in your area is just 6.2 years.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="border border-gray-200 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Battery className="w-5 h-5 text-gray-600" />
-                  <div className="font-semibold text-gray-900">Energy Independence</div>
-                </div>
+              <div className="border border-gray-200 rounded-lg p-4 text-left">
+                <Battery className="w-5 h-5 text-gray-600 mb-2" />
+                <div className="font-semibold text-gray-900 mb-2">Energy Independence</div>
                 <p className="text-sm text-gray-700">Protect against future rate hikes</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <DollarSign className="w-5 h-5 text-gray-600" />
-                  <div className="font-semibold text-gray-900">30% Tax Credit</div>
-                </div>
+              <div className="border border-gray-200 rounded-lg p-4 text-left">
+                <DollarSign className="w-5 h-5 text-gray-600 mb-2" />
+                <div className="font-semibold text-gray-900 mb-2">30% Tax Credit</div>
                 <p className="text-sm text-gray-700">Federal ITC expires soon</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Sun className="w-5 h-5 text-gray-600" />
-                  <div className="font-semibold text-gray-900">Carbon Offset</div>
-                </div>
+              <div className="border border-gray-200 rounded-lg p-4 text-left">
+                <Sun className="w-5 h-5 text-gray-600 mb-2" />
+                <div className="font-semibold text-gray-900 mb-2">Carbon Offset</div>
                 <p className="text-sm text-gray-700">Reduce environmental impact</p>
               </div>
             </div>

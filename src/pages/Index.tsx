@@ -19,6 +19,7 @@ import {
   ClipboardList,
   PenTool,
   Zap,
+  Battery,
   FileText,
   Shield,
   Settings,

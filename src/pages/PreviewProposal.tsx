@@ -82,9 +82,9 @@ const InteractiveBreakevenChart = () => {
           );
         })}
         
-        <text x="200" y="20" textAnchor="middle" className="text-sm font-semibold fill-orange-600">Breakeven</text>
-        <text x="470" y="20" textAnchor="middle" className="text-sm font-semibold fill-orange-600">Pure Savings Years 7-25</text>
-        <text x="740" y="60" textAnchor="middle" className="text-sm font-semibold fill-orange-600">$68,420</text>
+        <text x="200" y="20" textAnchor="middle" className="text-sm font-semibold fill-gray-900">Breakeven</text>
+        <text x="470" y="20" textAnchor="middle" className="text-sm font-semibold fill-gray-900">Pure Savings Years 7-25</text>
+        <text x="740" y="60" textAnchor="middle" className="text-sm font-semibold fill-gray-900">$68,420</text>
       </svg>
       
       {hoveredPoint && (
@@ -93,7 +93,7 @@ const InteractiveBreakevenChart = () => {
           style={{left: mousePos.x + 10, top: mousePos.y + 10}}
         >
           <div className="font-semibold">Year {hoveredPoint.year}</div>
-          <div className="text-orange-300">
+          <div className="text-gray-300">
             {hoveredPoint.savings >= 0 ? `+$${hoveredPoint.savings.toLocaleString()}` : `-$${Math.abs(hoveredPoint.savings).toLocaleString()}`}
           </div>
         </div>
@@ -190,26 +190,26 @@ const PreviewProposal = () => {
               already saving—average payback in your area is just 6.2 years.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="border border-orange-200 rounded-lg p-4">
+              <div className="border border-gray-200 rounded-lg p-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <Battery className="w-5 h-5 text-orange-600" />
-                  <div className="font-semibold text-orange-900">Energy Independence</div>
+                  <Battery className="w-5 h-5 text-gray-600" />
+                  <div className="font-semibold text-gray-900">Energy Independence</div>
                 </div>
-                <p className="text-sm text-orange-700">Protect against future rate hikes</p>
+                <p className="text-sm text-gray-700">Protect against future rate hikes</p>
               </div>
-              <div className="border border-orange-200 rounded-lg p-4">
+              <div className="border border-gray-200 rounded-lg p-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <DollarSign className="w-5 h-5 text-orange-600" />
-                  <div className="font-semibold text-orange-900">30% Tax Credit</div>
+                  <DollarSign className="w-5 h-5 text-gray-600" />
+                  <div className="font-semibold text-gray-900">30% Tax Credit</div>
                 </div>
-                <p className="text-sm text-orange-700">Federal ITC expires soon</p>
+                <p className="text-sm text-gray-700">Federal ITC expires soon</p>
               </div>
-              <div className="border border-orange-200 rounded-lg p-4">
+              <div className="border border-gray-200 rounded-lg p-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <Sun className="w-5 h-5 text-orange-600" />
-                  <div className="font-semibold text-orange-900">Carbon Offset</div>
+                  <Sun className="w-5 h-5 text-gray-600" />
+                  <div className="font-semibold text-gray-900">Carbon Offset</div>
                 </div>
-                <p className="text-sm text-orange-700">Reduce environmental impact</p>
+                <p className="text-sm text-gray-700">Reduce environmental impact</p>
               </div>
             </div>
           </div>
@@ -249,9 +249,9 @@ const PreviewProposal = () => {
             to grid → you get credits. Unlike generic solar, we've customized this specifically for your roof
             orientation, your consumption pattern, and your energy goals.
           </p>
-          <div className="border border-orange-200 rounded-lg p-4">
-            <div className="font-semibold text-orange-900 mb-2">Your System Captures 94% of Peak Consumption</div>
-            <p className="text-sm text-orange-700">
+          <div className="border border-gray-200 rounded-lg p-4">
+            <div className="font-semibold text-gray-900 mb-2">Your System Captures 94% of Peak Consumption</div>
+            <p className="text-sm text-gray-700">
               Optimized for your east-facing slope and seasonal usage patterns
             </p>
           </div>
@@ -271,7 +271,7 @@ const PreviewProposal = () => {
             </div>
             <div className="border border-gray-200 rounded-lg p-4">
               <div className="text-sm text-gray-600 mb-1">Annual Production</div>
-              <div className="text-2xl font-bold text-orange-600">16,800 kWh</div>
+              <div className="text-2xl font-bold text-gray-900">16,800 kWh</div>
             </div>
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -279,7 +279,7 @@ const PreviewProposal = () => {
             roof's east-facing slope, avoids shade from mature oak trees on the west side. Using Tier-1 panels
             rated for 25 years with industry-leading inverter efficiency.
           </p>
-          <div className="border-2 border-dashed border-orange-300 rounded-lg p-8 text-center bg-orange-50">
+          <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center bg-gray-50">
             <p className="text-sm text-gray-700 font-medium mb-2">Interactive 3D System Layout</p>
             <p className="text-xs text-gray-600">32 panels optimally positioned on your east-facing roof slope</p>
           </div>
@@ -423,7 +423,7 @@ const PreviewProposal = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Common Questions Answered</h2>
 
           <div className="space-y-4">
-            <details className="border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-orange-200">
+            <details className="border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-gray-300">
               <summary className="font-semibold text-gray-900">Does this void my roof warranty?</summary>
               <p className="mt-3 text-gray-700 text-sm">
                 No. Our installation includes roof penetration sealing and we work with certified roofers. Your
@@ -432,7 +432,7 @@ const PreviewProposal = () => {
               </p>
             </details>
 
-            <details className="border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-orange-200">
+            <details className="border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-gray-300">
               <summary className="font-semibold text-gray-900">What about cloudy days?</summary>
               <p className="mt-3 text-gray-700 text-sm">
                 Panels still generate on cloudy days, producing 15-25% of peak output. Your area gets 245 sunny
@@ -440,7 +440,7 @@ const PreviewProposal = () => {
               </p>
             </details>
 
-            <details className="border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-orange-200">
+            <details className="border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-gray-300">
               <summary className="font-semibold text-gray-900">What if I sell my house?</summary>
               <p className="mt-3 text-gray-700 text-sm">
                 Solar systems add an average of $21,000 to home value. If financed, the loan can transfer with
@@ -449,7 +449,7 @@ const PreviewProposal = () => {
               </p>
             </details>
 
-            <details className="border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-orange-200">
+            <details className="border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-gray-300">
               <summary className="font-semibold text-gray-900">What about maintenance?</summary>
               <p className="mt-3 text-gray-700 text-sm">
                 Minimal maintenance required. Annual inspection costs $100-300, and occasional cleaning if
@@ -458,7 +458,7 @@ const PreviewProposal = () => {
               </p>
             </details>
 
-            <details className="border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-orange-200">
+            <details className="border border-gray-200 rounded-lg p-4 cursor-pointer hover:border-gray-300">
               <summary className="font-semibold text-gray-900">Is my roof strong enough?</summary>
               <p className="mt-3 text-gray-700 text-sm">
                 We conducted a structural analysis and your roof is rated for solar loads. If reinforcement is
@@ -474,15 +474,15 @@ const PreviewProposal = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">15+</div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">15+</div>
               <div className="text-sm text-gray-600">Years in Business</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">2,847</div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">2,847</div>
               <div className="text-sm text-gray-600">Systems Installed</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">4.9★</div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">4.9★</div>
               <div className="text-sm text-gray-600">Customer Rating</div>
             </div>
           </div>
@@ -524,7 +524,7 @@ const PreviewProposal = () => {
 
           <div className="space-y-4 mb-6">
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 border-2 border-orange-500 rounded-full flex items-center justify-center text-orange-600 font-bold">
+              <div className="flex-shrink-0 w-8 h-8 border-2 border-gray-500 rounded-full flex items-center justify-center text-gray-600 font-bold">
                 1
               </div>
               <div>
@@ -535,7 +535,7 @@ const PreviewProposal = () => {
               </div>
             </div>
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 border-2 border-orange-500 rounded-full flex items-center justify-center text-orange-600 font-bold">
+              <div className="flex-shrink-0 w-8 h-8 border-2 border-gray-500 rounded-full flex items-center justify-center text-gray-600 font-bold">
                 2
               </div>
               <div>
@@ -547,7 +547,7 @@ const PreviewProposal = () => {
               </div>
             </div>
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 border-2 border-orange-500 rounded-full flex items-center justify-center text-orange-600 font-bold">
+              <div className="flex-shrink-0 w-8 h-8 border-2 border-gray-500 rounded-full flex items-center justify-center text-gray-600 font-bold">
                 3
               </div>
               <div>
@@ -560,9 +560,9 @@ const PreviewProposal = () => {
             </div>
           </div>
 
-          <div className="border border-orange-200 rounded-lg p-4">
-            <div className="font-semibold text-orange-900 mb-2">Your Project Manager</div>
-            <p className="text-sm text-orange-700">
+          <div className="border border-gray-200 rounded-lg p-4">
+            <div className="font-semibold text-gray-900 mb-2">Your Project Manager</div>
+            <p className="text-sm text-gray-700">
               Alex Thompson | (555) 123-4567 | alex@sundraftsolar.com
               <br />
               Available to answer questions throughout the entire process.
@@ -575,23 +575,23 @@ const PreviewProposal = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Now?</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div className="border border-orange-200 rounded-lg p-4">
-              <div className="font-semibold text-orange-900 mb-2">Federal ITC Expires</div>
-              <p className="text-sm text-orange-700">
+            <div className="border border-gray-200 rounded-lg p-4">
+              <div className="font-semibold text-gray-900 mb-2">Federal ITC Expires</div>
+              <p className="text-sm text-gray-700">
                 30% tax credit available through 2032, then drops to 26%. For your system, that's{" "}
                 <strong>$1,050 in lost savings</strong> if you wait.
               </p>
             </div>
-            <div className="border border-orange-200 rounded-lg p-4">
-              <div className="font-semibold text-orange-900 mb-2">Limited Installation Slots</div>
-              <p className="text-sm text-orange-700">
+            <div className="border border-gray-200 rounded-lg p-4">
+              <div className="font-semibold text-gray-900 mb-2">Limited Installation Slots</div>
+              <p className="text-sm text-gray-700">
                 Current installer availability fills by [Month]. Lock in summer installation to maximize
                 first-year production.
               </p>
             </div>
           </div>
 
-          <div className="border-l-4 border-orange-500 p-4 bg-orange-50/30">
+          <div className="border-l-4 border-gray-500 p-4 bg-gray-50/30">
             <p className="text-gray-700 leading-relaxed italic">
               <strong>
                 Imagine year 6 when your system is paid off and you're generating free electricity for 19 more
@@ -629,9 +629,9 @@ const PreviewProposal = () => {
         <section className="bg-white rounded-lg border-2 border-dashed border-gray-300 p-6 animate-in fade-in duration-700 delay-1400">
           <h2 className="text-xl font-bold text-gray-900 mb-4">What Happens After Approval?</h2>
 
-          <div className="space-y-3 text-sm text-orange-500">
+          <div className="space-y-3 text-sm text-gray-700">
             <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 w-6 h-6 border border-orange-500 rounded-full flex items-center justify-center text-orange-500 text-xs font-regular">
+              <div className="flex-shrink-0 w-6 h-6 border border-gray-500 rounded-full flex items-center justify-center text-gray-600 text-xs font-regular">
                 ✓
               </div>
               <div>
@@ -640,7 +640,7 @@ const PreviewProposal = () => {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 w-6 h-6 border border-orange-500 rounded-full flex items-center justify-center text-orange-500 text-xs font-regular">
+              <div className="flex-shrink-0 w-6 h-6 border border-gray-500 rounded-full flex items-center justify-center text-gray-600 text-xs font-regular">
                 2
               </div>
               <div>
@@ -649,7 +649,7 @@ const PreviewProposal = () => {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 w-6 h-6 border border-orange-500 rounded-full flex items-center justify-center text-orange-500  text-xs font-regular">
+              <div className="flex-shrink-0 w-6 h-6 border border-gray-500 rounded-full flex items-center justify-center text-gray-600 text-xs font-regular">
                 3
               </div>
               <div>

@@ -664,27 +664,27 @@ const Index = () => {
         {/* App Content */}
         <div className="flex h-screen relative">
           {/* Left Sidebar - Hidden on mobile, visible on tablet+ */}
-          <aside className="hidden md:flex w-12 md:w-16 bg-gray-50 border-r border-gray-200 flex-col items-center animate-in slide-in-from-left duration-500 fixed left-0 top-0 h-screen z-10">
-            <nav className="flex flex-col items-center gap-1 pt-4">
+          <aside className="hidden md:flex w-12 md:w-16 bg-gray-50 border-r border-gray-200 flex-col items-center animate-in slide-in-from-left duration-500 fixed left-0 top-[60px] h-[calc(100vh-60px)] z-10">
+            <nav className="flex flex-col items-center gap-2 pt-6">
               {navItems.map((item, index) => (
                 <button
                   key={index}
-                  className={`p-2 rounded-lg transition-all duration-200 ${item.active ? "border-2 border-primary text-primary" : "text-gray-500 hover:bg-accent hover:text-accent-foreground"}`}
+                  className={`p-3 rounded-lg transition-all duration-200 ${item.active ? "border-2 border-primary text-primary" : "text-gray-500 hover:bg-accent hover:text-accent-foreground"}`}
                   aria-label={item.label}
                   title={item.label}
                 >
-                  <item.icon className="w-4 h-4" strokeWidth={1.5} />
+                  <item.icon className="w-5 h-5" strokeWidth={1.5} />
                 </button>
               ))}
             </nav>
 
-            <div className="mt-auto pb-4">
+            <div className="mt-auto pb-6">
               <button
-                className="p-2 rounded-lg text-gray-500 hover:bg-accent hover:text-accent-foreground transition-all duration-200"
+                className="p-3 rounded-lg text-gray-500 hover:bg-accent hover:text-accent-foreground transition-all duration-200"
                 aria-label="Settings"
                 title="Settings"
               >
-                <Settings className="w-4 h-4" strokeWidth={1.5} />
+                <Settings className="w-5 h-5" strokeWidth={1.5} />
               </button>
             </div>
           </aside>
